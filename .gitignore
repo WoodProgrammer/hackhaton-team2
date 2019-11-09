@@ -1,0 +1,12 @@
+# Exuberant Ctags
+/tags
+/Gemfile.lock
+/tmp/
+/coverage
+/pkg
+*.swo
+.ruby-version
+/doc
+.bundle
+vendor/
+.idea/
