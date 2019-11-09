@@ -26,7 +26,7 @@ Capybara.register_driver :selenium do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
       chromeOptions: { args: %w(no-sandbox start-maximized) }
   )
-  Capybara::Selenium::Driver.new(app,:browser => :chrome,
+  Capybara::Selenium::Driver.new(app,:browser => :remote, :url => "http://localhost:4444/wd/hub",
                                  desired_capabilities: capabilities)
 end
 

@@ -1,0 +1,2 @@
+default: -r features -f pretty -f html --out output/report.html
+parallel: -r features -f pretty -f html --out output/report.html
