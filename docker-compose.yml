@@ -1,0 +1,19 @@
+version: "3"
+services:
+  selenium:
+    image: selenium/hub
+    environment:
+      GRID_BROWSER_TIMEOUT: 300
+      GRID_TIMEOUT: 300
+    ports:
+      - "4444:4444"
+  chromenode:
+    image: selenium/node-chrome
+    environment:
+      HUB_PORT_4444_TCP_ADDR: selenium
+      HUB_PORT_4444_TCP_PORT: 4444
+      NODE_TIMEOUT: 500
+    ports:
+      - "5555"
+    depends_on:
+      - selenium
